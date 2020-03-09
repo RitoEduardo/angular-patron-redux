@@ -1,0 +1,17 @@
+<h3> Counter: </h3>
+<h4> {{ counter }}</h4>
+
+<div class="row">
+  <div class="col">
+    <button (click)="onMultiplication()" class="btn btn-primary"> Multiplication [*{{BASE}}] </button>
+    <button (click)="onDivision()" class="btn btn-info"> Division [/{{BASE}}]</button>
+  </div>
+</div>
+
+<hr>
+
+<div class="row text-center">
+  <div class="col">
+    <app-grandchild [counter]="counter" (resetCounter)="onResetCounter($event)"></app-grandchild>
+  </div>
+</div>
